@@ -251,7 +251,7 @@ bool outputResults(const std::string& result_path,
     // Sort by revenue descending
     std::vector<std::pair<std::string,double>> sorted(results.begin(), results.end());
     std::sort(sorted.begin(), sorted.end(),
-        [](const auto& a, const auto& b){ return a.second > b.second; });
+        [](const std::pair<std::string, double>& a, const std::pair<std::string, double>& b){ return a.second > b.second; });
 
     // Print to stdout
     std::cout << std::string(45, '=') << std::endl;
